@@ -1,11 +1,10 @@
-import { Container } from "./header.styled";
-import { Link } from "react-router-dom";
+import { Container, PageLink } from "./header.styled";
 
 const Header = () => {
   return (
     <Container>
-      <Link to={"/"}>Shop</Link>
-      <Link to={"/cart"}>Shoping cart</Link>
+      <PageLink to={"/"}>Shop</PageLink>
+      <PageLink to={"/cart"}>Shoping cart</PageLink>
     </Container>
   );
 };

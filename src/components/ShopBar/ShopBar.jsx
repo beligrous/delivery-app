@@ -1,9 +1,13 @@
 import { Container } from "./shopBar.styled";
+import shops from "../../shops";
+import ShopItem from "./ShopItem";
 
 const ShopBar = () => {
   return (
     <Container>
-      <div>Cart</div>
+      {shops.map((item) => (
+        <ShopItem key={item.id} data={item} />
+      ))}
     </Container>
   );
 };

@@ -1,5 +1,5 @@
 import { MainContainer } from "./App.styled";
-import { page } from "./pages";
+import page from "./pages";
 import comp from "./components";
 import { Routes, Route } from "react-router-dom";
 
