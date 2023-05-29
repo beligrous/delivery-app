@@ -19,6 +19,11 @@ const shops = [
     id: 4,
     menu: ["sushi", "roles", "soup", "wine"],
   },
+  {
+    name: "SmachnaHata",
+    id: 5,
+    menu: ["borsch", "potato", "salat", "soup", "juice"],
+  },
 ];
 
 export default shops;

@@ -1,11 +1,11 @@
-import { Wrap, Title } from "./shopItem.styled";
+import { createContext } from "react";
+import { Wrap } from "./shopItem.styled";
+
+let choosenShop = null;
 
 const ShopItem = ({ data }) => {
-  return (
-    <Wrap>
-      <Title>{data.name}</Title>
-    </Wrap>
-  );
+  return <Wrap to={`/${data.id}`}>{data.name}</Wrap>;
 };
 
 export default ShopItem;
+export const shopContext = createContext(choosenShop);
