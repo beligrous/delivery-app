@@ -1,11 +1,14 @@
-import { createContext } from "react";
 import { Wrap } from "./shopItem.styled";
-
-let choosenShop = null;
+import { useShop } from "../../context";
 
 const ShopItem = ({ data }) => {
-  return <Wrap to={`/${data.id}`}>{data.name}</Wrap>;
+  const { chooseShop } = useShop();
+
+  return (
+    <Wrap to={`/${data.id}`} onClick={() => chooseShop(data)}>
+      {data.name}
+    </Wrap>
+  );
 };
 
 export default ShopItem;
-export const shopContext = createContext(choosenShop);
