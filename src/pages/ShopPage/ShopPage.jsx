@@ -1,16 +1,16 @@
 import { Container } from "./shopPage.styled";
+import { nanoid } from "nanoid";
 import { useShop } from "../../context";
+import comp from "../../components";
 
 const ShopPage = () => {
   const { shop } = useShop();
 
   return (
     <Container>
-      {shop ? (
-        shop.menu.map((item) => <p>{item}</p>)
-      ) : (
-        <p>Choose a shop, you want to make order</p>
-      )}
+      {shop.menu.map((item) => (
+        <comp.ShopMenuItem key={nanoid()} data={item} />
+      ))}
     </Container>
   );
 };
